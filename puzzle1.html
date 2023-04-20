@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lost Treasure Hunt</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Lost Treasure Hunt</h1>
+	<p>Use the clues and avoid the dead-ends to find the location of the treasure.</p>
+
+    <div class="container">
+        <div class="logo">
+          <img src="logo.jpeg">
+        </div>
+        <div class="title">
+          <h1>Lost Treasure Hunt</h1>
+        </div>
+        <div class="clue">The treasure is buried in a location where there are four palm trees.</div>
+<div class="clue">The treasure is buried next to a big rock with a peculiar shape.</div>
+<div class="clue">The treasure is buried at a distance of 15 steps from a broken statue.</div>
+        <div class="dead-ends">
+          <h2>Dead-ends:</h2>
+          <ul>
+            <li>The treasure is not buried near any body of water.</li>
+            <li>The treasure is not buried on a slope.</li>
+          </ul>
+        </div>
+        <div class="instructions">
+          <h2>Instructions:</h2>
+          <p>The player must use the three clues to find the location of the treasure. However, there are also two dead-ends, which are meant to mislead the player. The dead-ends are statements that are true but do not lead the player to the location of the treasure. The player must use logic and deduction to determine which statements are relevant to the puzzle and which are dead-ends.</p>
+        </div>
+      </div>
+	<div id="input">
+		<h2>Enter Your Guess</h2>
+		<label for="palm-trees">Number of palm trees:</label>
+		<input type="number" id="palm-trees" min="1" max="10">
+		<br>
+		<label for="rock-shape">Description of rock shape:</label>
+		<input type="text" id="rock-shape">
+		<br>
+		<label for="distance">Distance from broken statue:</label>
+		<input type="number" id="distance" min="1" max="20">
+		<br>
+		<button id="submit">Submit Guess</button>
+	</div>
+  <div class="logo"></div>
+<div class="text">Welcome to the Lost Treasure Hunt game!</div>
+<div class="footer">PASHUPATHI MALI</div>
+
+	<div id="result">
+		<h2>Result</h2>
+		<p id="message"></p>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
+
+
+
+  

@@ -1,0 +1,76 @@
+/* Set the background image and color scheme */
+body {
+  background-image: url('island.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #00a2ff;
+}
+
+/* Add the logo to the page */
+.logo {
+  display: block;
+  margin: 50px auto;
+  width: 200px;
+  height: 200px;
+  background-image: url('logo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  animation: logo-fade-in 2s ease;
+}
+
+/* Add some text to the page */
+.text {
+  display: block;
+  margin: 50px auto;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  animation: text-fade-in 2s ease;
+}
+
+/* Define animations for the logo and text */
+@keyframes logo-fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes text-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* animate the clues */
+.clue {
+  opacity: 0; /* initially hidden */
+  animation: fadeIn 1s ease forwards;
+}
+
+/* animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* start with opacity 0 */
+    transform: translateY(20px); /* move up 20px */
+  }
+  to {
+    opacity: 1; /* end with opacity 1 */
+    transform: translateY(0); /* back to original position */
+  }
+}
+
+  
+  
+    
+  

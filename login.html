@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style5.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title">Login Form</div>
+      <form >
+        <div class="field">
+          <input type="text" name="email" id="email" required>
+          <label>Email Address or User Id</label>
+        </div>
+        <div class="field">
+          <input type="password" name="password" id="password" required>
+          <label>Password</label>
+        </div>
+        <div class="content">
+          <div class="checkbox">
+            <input type="checkbox" id="remember-me">
+            <label for="remember-me">Remember me</label>
+          </div>
+          </div>
+        <div class="field">
+          <input type="submit" value="Login">
+        </div>
+        <div class="signup-link">Not a member? <a href="./signup.html">Signup now</a></div>
+      </form>
+    </div>
+  </body>
+
+  <script>
+    const form = document.querySelector("form");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const emailValue = emailInput.value;
+      const passwordValue = passwordInput.value;
+
+
+
+
+
+      //console.log(emailValue,passwordValue)
+
+      const response = await fetch(
+        `https://puzzle123.onrender.com/auth/login`,
+        {
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email: emailValue, password: passwordValue }),
+        }
+      );
+      const json = await response.json();
+
+      if (json.sucess) {
+        console.log(json.authtoken)
+        localStorage.setItem("mypuzzletoken2", json.authtoken)
+        location.replace("./puzzle1.html")
+
+      }
+      else {
+        alert(json.errors)
+      }
+
+
+    });
+  </script>
+
+</html>
